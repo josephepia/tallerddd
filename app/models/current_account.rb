@@ -1,0 +1,2 @@
+class CurrentAccount < BankAccount
+end

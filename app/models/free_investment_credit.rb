@@ -1,0 +1,2 @@
+class FreeInvestmentCredit < Credit
+end

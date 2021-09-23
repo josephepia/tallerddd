@@ -36,6 +36,7 @@ module Tallerddd
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
+    config.eager_load_paths += %W(#{config.root}/lib) # para acceder a los modulos en lib globalmente
     config.api_only = true
   end
 end

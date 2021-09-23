@@ -10,22 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_15_215055) do
+ActiveRecord::Schema.define(version: 2021_09_20_124417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "movements", force: :cascade do |t|
-    t.float "valor"
-    t.date "fecha"
-    t.string "tipo"
+  create_table "credits", force: :cascade do |t|
+    t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "saving_accounts", force: :cascade do |t|
-    t.float "saldo"
+  create_table "current_accounts", force: :cascade do |t|
     t.string "numero"
+    t.float "saldo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "investment_funds", force: :cascade do |t|
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "savings_accounts", force: :cascade do |t|
+    t.string "numero"
+    t.float "saldo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
